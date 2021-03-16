@@ -1,6 +1,6 @@
 require File.expand_path(File.dirname(__FILE__) + '/../fibonacci')
 
-describe BonusDrink do
+describe FibonacciSequence do
   specify { expect(FibonacciSequence.fibonacci_item(0)).to eq 0 }
   specify { expect(FibonacciSequence.fibonacci_item(1)).to eq 1 }
   specify { expect(FibonacciSequence.fibonacci_item(2)).to eq 1 }
