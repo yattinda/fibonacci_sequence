@@ -12,7 +12,7 @@ jobs:
 
     # 実行仮想マシンをubuntuに設定
     runs-on: ubuntu-latest
-    timeout-minutes: 3
+    timeout-minutes: 0.5
     steps:
     - uses: actions/checkout@v2
     - name: Set up Ruby
