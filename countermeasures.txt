@@ -1,0 +1,17 @@
+現状の調査
+無限ループ等を行うとWorkflowは最大6時間実行し続ける。
+私が実行すると10分間実行し続けることを確認（その後強制停止）
+
+対策
+ruby.ymlのmy-jobもしくはstepsに以下を記述する（標準機能）
+
+timeout-minutes: 30 (30分の実行制限時間)
+
+私が timeout-minutes: 3 で実行したところ動作したことを確認
+一分単位での調整はできなかった（timeout-minutes: 0.5）
+
+参考
+公式
+https://docs.github.com/ja/actions/reference/workflow-syntax-for-github-actions
+[GitHub]Actions Workflowへのtimeout指定のススメ
+https://dev.classmethod.jp/articles/must-set-timeout-on-actions-for-save-cost/
