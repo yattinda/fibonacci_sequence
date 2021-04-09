@@ -3,7 +3,7 @@ name: Ruby
 # my_answerブランチへpushされた際に実行
 on:
   push:
-    branches: 
+    branches:
     - my_answer
 
 jobs:
@@ -12,7 +12,7 @@ jobs:
 
     # 実行仮想マシンをubuntuに設定
     runs-on: ubuntu-latest
-
+    timeout-minutes: 3
     steps:
     - uses: actions/checkout@v2
     - name: Set up Ruby
